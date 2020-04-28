@@ -1,3 +1,0 @@
-# test
-
-invisibilisation dans gitignore
