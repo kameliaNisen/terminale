@@ -1,4 +1,4 @@
-# Première NSI aux lycées Jean Rostand et Maxence Van der Meersch de Roubaix
+# Terminale NSI aux lycées Jean Rostand et Maxence Van der Meersch de Roubaix
 
 Cet endroit est un _repository_ **github** où se trouvent toutes les ressources pédagogiques et toutes les informations utiles aux élèves du lycée et à leur famille.
 
