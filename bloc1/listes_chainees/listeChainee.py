@@ -50,7 +50,7 @@ class ListeChainee:
         >>> l.is_empty()
         False
         '''
-        return self.tete is None
+        pass
         
     def head(self) :
         '''
@@ -62,9 +62,7 @@ class ListeChainee:
         >>> l.head()
         1
         '''       
-        if self.is_empty():
-            raise IndexError("indice invalide")
-        return self.tete.valeur
+        pass
     
     def tail(self):
         '''
@@ -82,11 +80,7 @@ class ListeChainee:
         >>> l.tail().tail()
         (3,())
         '''
-        if self.is_empty():
-            raise IndexError("indice invalide")
-        liste = ListeChainee()
-        liste.tete = self.tete.suivante
-        return liste
+        pass
     
     def longueur(self):
         # avec une fonction récursive
@@ -104,10 +98,7 @@ class ListeChainee:
         >>> l.longueur()
         2
         '''
-        if self.is_empty():
-            return 0
-        else:
-            return 1 + self.tail().longueur()
+        pass
 
     def longueur(self):
         # avec une boucle
@@ -125,12 +116,7 @@ class ListeChainee:
         >>> l.longueur()
         2
         '''
-        n = 0
-        liste = self
-        while not liste.is_empty():
-            n += 1
-            liste = liste.tail()
-        return n
+        pass
 
     def __len__(self):
         '''
@@ -164,12 +150,7 @@ class ListeChainee:
         >>> l.nieme_element(1)
         'b'
         '''
-        if self.is_empty():
-            raise IndexError("indice invalide")
-        if n == 0:
-            return self.head()
-        else:
-            return self.tail().nieme_element(n - 1)
+        pass
     
     def __getitem__(self, n):
         '''
@@ -199,12 +180,7 @@ class ListeChainee:
         >>> l.reverse()
         (3,(2,(1,())))
         '''
-        r = ListeChainee()
-        liste = self
-        while not liste.is_empty():
-            r.add_cell(liste.head())
-            liste = liste.tail()
-        return r
+        pass
 
     def __add__(self, liste):
         '''
@@ -251,14 +227,7 @@ class ListeChainee:
         >>> l
         ('x',(1,('y',(2,(3,())))))
         '''
-        if n == 0:
-            self.add_cell(element)
-        else :
-            liste = self
-            for i in range(n-1):
-                liste = liste.tail()
-            c = Cellule(element,liste.tete.suivante)
-            liste.tete.suivante = c
+        pass
 
 if __name__ == "__main__":
     import doctest
