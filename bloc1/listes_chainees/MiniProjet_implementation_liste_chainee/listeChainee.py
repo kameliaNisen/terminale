@@ -43,11 +43,11 @@ class ListeChainee:
         Détermine si la liste est vide ou non
         Résultat (bool) : True si la liste ne contient aucune cellule
         
-        >>> l = ListeChainee()
-        >>> l.is_empty()
+        >>> liste = ListeChainee()
+        >>> liste.is_empty()
         True
-        >>> l.add_cell(1)
-        >>> l.is_empty()
+        >>> liste.add_cell(1)
+        >>> liste.is_empty()
         False
         '''
         pass
@@ -57,11 +57,11 @@ class ListeChainee:
         Renvoie l'élément en tête de liste chaînée non vide
         Resultat : premier élément de la liste chaînée
         
-        >>> l = ListeChainee()
-        >>> l.add_cell(1)
-        >>> l.head()
+        >>> liste = ListeChainee()
+        >>> liste.add_cell(1)
+        >>> liste.head()
         1
-        '''       
+        '''      
         pass
     
     def tail(self):
@@ -69,15 +69,15 @@ class ListeChainee:
         Renvoie la queue d'une liste chaînée non vide
         Resultat (ListeChainee)
         
-        >>> l = ListeChainee()
-        >>> l.add_cell(3)
-        >>> l.tail()
+        >>> liste = ListeChainee()
+        >>> liste.add_cell(3)
+        >>> liste.tail()
         ()
-        >>> l.add_cell(2)
-        >>> l.tail()
+        >>> liste.add_cell(2)
+        >>> liste.tail()
         (3,())
-        >>> l.add_cell(1)
-        >>> l.tail().tail()
+        >>> liste.add_cell(1)
+        >>> liste.tail().tail()
         (3,())
         '''
         pass
@@ -88,14 +88,14 @@ class ListeChainee:
         Calcule le nombre de cellules d'une liste chaînée
         Résultat(int) : nombre d'élément dans la liste
         
-        >>> l = ListeChainee()
-        >>> l.longueur()
+        >>> liste = ListeChainee()
+        >>> liste.longueur()
         0
-        >>> l.add_cell('b')
-        >>> l.longueur()
+        >>> liste.add_cell('b')
+        >>> liste.longueur()
         1
-        >>> l.add_cell('a')
-        >>> l.longueur()
+        >>> liste.add_cell('a')
+        >>> liste.longueur()
         2
         '''
         pass
@@ -106,14 +106,14 @@ class ListeChainee:
         Calcule le nombre de cellules d'une liste chaînée
         Résultat(int) : nombre d'élément dans la liste
         
-        >>> l = ListeChainee()
-        >>> l.longueur()
+        >>> liste = ListeChainee()
+        >>> liste.longueur()
         0
-        >>> l.add_cell('b')
-        >>> l.longueur()
+        >>> liste.add_cell('b')
+        >>> liste.longueur()
         1
-        >>> l.add_cell('a')
-        >>> l.longueur()
+        >>> liste.add_cell('a')
+        >>> liste.longueur()
         2
         '''
         pass
@@ -123,14 +123,14 @@ class ListeChainee:
         Calcule le nombre de cellules d'une liste chaînée
         Résultat(int) : nombre d'élément dans la liste
         
-        >>> l = ListeChainee()
-        >>> l.longueur()
+        >>> liste = ListeChainee()
+        >>> len(liste)
         0
-        >>> l.add_cell('b')
-        >>> l.longueur()
+        >>> liste.add_cell('b')
+        >>> len(liste)
         1
-        >>> l.add_cell('a')
-        >>> l.longueur()
+        >>> liste.add_cell('a')
+        >>> len(liste)
         2
         '''
         return self.longueur()
@@ -142,12 +142,12 @@ class ListeChainee:
         n (int) : indice de l'élément demandé
         Résultat : nieme élément de la liste
         
-        >>> l = ListeChainee()
-        >>> l.add_cell('b')
-        >>> l.add_cell('a')
-        >>> l.nieme_element(0)
+        >>> liste = ListeChainee()
+        >>> liste.add_cell('b')
+        >>> liste.add_cell('a')
+        >>> liste.nieme_element(0)
         'a'
-        >>> l.nieme_element(1)
+        >>> liste.nieme_element(1)
         'b'
         '''
         pass
@@ -156,12 +156,12 @@ class ListeChainee:
         '''
         La notation `liste[i]` renvoie l'élément d'indice i
         
-        >>> l = ListeChainee()
-        >>> l.add_cell('b')
-        >>> l.add_cell('a')
-        >>> l[0]
+        >>> liste = ListeChainee()
+        >>> liste.add_cell('b')
+        >>> liste.add_cell('a')
+        >>> liste[0]
         'a'
-        >>> l[1]
+        >>> liste[1]
         'b'
         '''
         return self.nieme_element(n)
@@ -171,13 +171,13 @@ class ListeChainee:
         inverse l'ordre des éléments d'une liste chaînée
         Résultat (listeChainee) : liste chaînée contenant les éléments dans l'ordre inverse
         
-        >>> l = ListeChainee()
-        >>> l.add_cell(3)
-        >>> l.add_cell(2)
-        >>> l.add_cell(1)
-        >>> l
+        >>> liste = ListeChainee()
+        >>> liste.add_cell(3)
+        >>> liste.add_cell(2)
+        >>> liste.add_cell(1)
+        >>> liste
         (1,(2,(3,())))
-        >>> l.reverse()
+        >>> liste.reverse()
         (3,(2,(1,())))
         '''
         pass
@@ -186,19 +186,19 @@ class ListeChainee:
         '''
         L'opérateur `+` entre listes chaînées renvoie la concaténation de celles-ci
         
-        >>> l = ListeChainee()
-        >>> l.add_cell(3)
-        >>> l.add_cell(2)
-        >>> l.add_cell(1)
-        >>> l
+        >>> liste = ListeChainee()
+        >>> liste.add_cell(3)
+        >>> liste.add_cell(2)
+        >>> liste.add_cell(1)
+        >>> liste
         (1,(2,(3,())))
-        >>> l2 = ListeChainee()
-        >>> l2.add_cell(6)
-        >>> l2.add_cell(5)
-        >>> l2.add_cell(4)
-        >>> l2
+        >>> liste2 = ListeChainee()
+        >>> liste2.add_cell(6)
+        >>> liste2.add_cell(5)
+        >>> liste2.add_cell(4)
+        >>> liste2
         (4,(5,(6,())))
-        >>> l + l2
+        >>> liste + liste2
         (1,(2,(3,(4,(5,(6,()))))))
         '''
         resultat = ListeChainee()
@@ -214,21 +214,67 @@ class ListeChainee:
         Resulat (None)
         Effet de bord : Modification de la liste en place
         
-        >>> l = ListeChainee()
-        >>> l.add_cell(3)
-        >>> l.add_cell(2)
-        >>> l.add_cell(1)
-        >>> l
+        >>> liste = ListeChainee()
+        >>> liste.add_cell(3)
+        >>> liste.add_cell(2)
+        >>> liste.add_cell(1)
+        >>> liste
         (1,(2,(3,())))
-        >>> l.insert(0,'x')
-        >>> l
+        >>> liste.insert(0,'x')
+        >>> liste
         ('x',(1,(2,(3,()))))
-        >>> l.insert(2,'y')
-        >>> l
+        >>> liste.insert(2,'y')
+        >>> liste
         ('x',(1,('y',(2,(3,())))))
         '''
         pass
+    
+    def delete(self,n):
+        '''
+        Supprime l'élément à l'indice n dans la liste chaînée
+        n (int) : indice de l'élément supprimé
+        Resulat (None)
+        Effet de bord : Modification de la liste en place
+        
+        >>> liste = ListeChainee()
+        >>> liste.add_cell('d')
+        >>> liste.add_cell('c')
+        >>> liste.add_cell('b')
+        >>> liste.add_cell('a')
+        >>> liste
+        ('a',('b',('c',('d',()))))
+        >>> liste.delete(0)
+        >>> liste
+        ('b',('c',('d',())))
+        >>> liste.delete(1)
+        >>> liste
+        ('b',('d',()))
+        '''
+        pass
+            
+    def __delitem__(self,n):
+        '''
+        Supprime l'élément à l'indice n dans la liste chaînée
+        n (int) : indice de l'élément supprimé
+        Resulat (None)
+        Effet de bord : Modification de la liste en place
+        
+        >>> liste = ListeChainee()
+        >>> liste.add_cell('d')
+        >>> liste.add_cell('c')
+        >>> liste.add_cell('b')
+        >>> liste.add_cell('a')
+        >>> liste
+        ('a',('b',('c',('d',()))))
+        >>> del liste[0]
+        >>> liste
+        ('b',('c',('d',())))
+        >>> del liste[1]
+        >>> liste
+        ('b',('d',()))
+        '''
+        self.delete(n)
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS, verbose=True)
+    doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS, verbose=False)
