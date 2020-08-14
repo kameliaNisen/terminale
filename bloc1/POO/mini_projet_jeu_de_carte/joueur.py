@@ -1,8 +1,5 @@
-from jeuDeCarte import *
-
 class Joueur:
     def __init__(self, nom, main):
-        #  main : liste de cartes que le joueur possède
         # A compléter
 
     def jouerCarte(self,i):

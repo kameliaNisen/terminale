@@ -1,15 +1,12 @@
 class Carte:
     # Attributs de classes
-    # Pour manipuler ces attributs de classe, certaines méthodes de
-    # classes devront être créées le moment venu
     couleurs = ('Coeur', 'Carreau', 'Trèfle', 'Pique')
     noms = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi', 'As']
     valeurs = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, \
                          '9': 9, '10': 10, 'Valet': 11, 'Dame': 12, 'Roi': 13, 'As': 14}
-    nb = 52
     
             
-    def __init__(self, nom, coul, nb_cartes = __nb):
+    def __init__(self, nom, coul):
         self.nom = nom
         self.couleur = coul
         self.valeur = # A compléter     

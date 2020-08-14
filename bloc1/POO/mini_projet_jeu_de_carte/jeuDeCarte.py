@@ -1,6 +1,3 @@
-import carte
-import random
-
 class JeuDeCarte:
     def creerPaquet(self):
         #A compléter
@@ -19,8 +16,6 @@ class JeuDeCarte:
         # A compléter
     
     def distribuerCarte(self):
-        # Renvoie une carte contenue dans le paquet
-        # effet de bord : le paquet perd une carte.
         # A compléter
     
     def distribuerCartes(self,nbCartes,nbJoueurs):
