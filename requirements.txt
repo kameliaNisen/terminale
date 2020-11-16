@@ -2,4 +2,3 @@ matplotlib
 folium
 nbtutor
 jupyter_contrib_nbextensions
-Exercice
