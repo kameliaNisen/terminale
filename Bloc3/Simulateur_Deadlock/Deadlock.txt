@@ -1,0 +1,3 @@
+java deadlock a 2 1
+java deadlock b 2 1 2
+java deadlock b 2 1 1
